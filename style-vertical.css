@@ -31,7 +31,7 @@ body{
 .global{
 	width:1200px; 
 	margin:0 auto;
-	background-color:lavender;
+	background-color:#60B4B7;
 }
 
 .global*{
@@ -39,24 +39,23 @@ body{
 }
 
 .entete{
-	height:80px;
+	height:90px;
 	padding:10px;
-	background-color:lightgray;
-	font-size:14px;
-}
-
-.blocmenu, .contenu{
-	box-sizing: border-box;
-	display:inline-block;
-	vertical-align: top;
+	background-color:#EEEEEE;
+	font-size:16px;
+	text-align: center;
 }
 
 .blocmenu{
 	width:200px;
+	display:inline-block;
 }
 
 .contenu{
-	width:1000px;
+	box-sizing: border-box;
+	display:inline-block;
+	vertical-align: top;
+	width:1200px;
 	padding:10px;
 	padding-left: 30px;
 	background-color:white;
@@ -77,7 +76,7 @@ body{
 }
 
 .pied{
-	border-top:solid lavender;
+	border-top:solid #60B4B7;
 	border-top-width: :2px;
 	padding:30px;
 	background-color:lightgray;
@@ -87,8 +86,10 @@ body{
 }
 
 #menu{
+	width:1200px;
 	display:flex;
 	list-style-type: none;
+    justify-content: center;
 }
 
 #menu li{
@@ -100,13 +101,59 @@ body{
 	height:50px;
 	line-height: 35px;
 	padding: 15px 50px;
-	font-size:14px;
+	font-size:18px;
 	text-decoration:none;
 	color:black;
 }
 
 #menu li a:hover{
-	background-color:lightsteelblue;
-	color:brown;
+	background-color:none;
+	color:white;
+}
+
+/* Responsive design*/
+@media all and (max-device-width: 480px)
+{
+  
+ .global{
+    width: auto;
+	}
+
+.entete{
+	display:flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	height: 50px;
+}
+ 
+ .blocmenu{
+ 	width: auto;
+ 	display:flex;
+	flex-wrap: wrap;
+	justify-content: center;
+
+}
+
+
+.contenu{
+	width:auto;
+	padding:0px;
+	padding-left: 0px;
+	background-color:white;
+	margin: 0 auto;
+	display:flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	flex-direction: column;
+	text-align: center;
+}
+
+
+
+.pied{
+	height:50px;
+	padding: 10px;
+}
+
 }
 
